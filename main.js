@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         tombolSelesai.classList.add('green');
 
         tombolSelesai.addEventListener('click', function() {
-            undoTaskFromCompleted(bukuObject.id);
+            undoTaskFromCompleted(s.id);
         });
 
     const tombolHapus = document.createElement('button');
@@ -103,9 +103,33 @@ document.addEventListener('DOMContentLoaded', function () {
     textContainer.append(tombolSelesai, tombolHapus);
    } else {
     const checkButton = document.createElement('button');
-    checkButton.classList.add
+    checkButton.classList.add('check-button');
+
+    checkButton.addEventListener('click',  function () {
+        add
+    });
 
    }
 
 
   }
+
+
+   
+
+  document.addEventListener(RENDER_EVENT, function(){
+    const belumDibaca = document.getElementById('incompleteBookshelfList');
+    belumDibaca.innerHTML = '';
+
+    const sudahDibaca = document.getElementById('completeBookshelfList');
+    sudahDibaca.innerHTML = '';
+
+    for (const itemBuku of books) {
+        const bukuElement = buatBuku(itemBuku);
+        if (!itemBuku.selesaiDibaca)
+        belumDibaca.append(bukuElement);
+        else
+        sudahDibaca.append(bukuElement);
+    }
+
+  });
