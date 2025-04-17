@@ -1,3 +1,7 @@
+// Do your work here...
+console.log('Hello, world!');
+
+
 const booktodos = [];
 const RENDER_EVENT = "render-book";
 
