@@ -15,7 +15,7 @@
     </header>
 
     <main>
-      <section>
+      <section class="addBook">
         <h2>Tambah Buku Baru</h2>
         <form id="bookForm" data-testid="bookForm">
           <div>
@@ -36,6 +36,7 @@
               id="bookFormIsComplete"
               type="checkbox"
               data-testid="bookFormIsCompleteCheckbox"
+              value="completed"
             />
           </div>
           <button id="bookFormSubmit" type="submit" data-testid="bookFormSubmitButton">
@@ -44,7 +45,7 @@
         </form>
       </section>
 
-      <section>
+      <section class="searchBook"">
         <h2>Cari Buku</h2>
         <form id="searchBook" data-testid="searchBookForm">
           <label for="searchBookTitle">Judul</label>
@@ -55,7 +56,7 @@
         </form>
       </section>
 
-      <section>
+      <section class="bookList">
         <h2>Belum selesai dibaca</h2>
 
         <div id="incompleteBookList" data-testid="incompleteBookList">
@@ -76,7 +77,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="bookListFinish">
         <h2>Selesai dibaca</h2>
 
         <div id="completeBookList" data-testid="completeBookList">
